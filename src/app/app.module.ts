@@ -1,3 +1,4 @@
+import { ConfiguracionGuard } from './guardianes/configuracion.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { environment } from './../environments/environment';
@@ -49,7 +50,8 @@ import { ConfiguracionServicio } from './servicios/configuracion.service';
   providers: [ClienteServicio, 
               LoginService, 
               AuthGuard, 
-              ConfiguracionServicio, 
+              ConfiguracionServicio,
+              ConfiguracionGuard, 
               { provide: FirestoreSettingsToken, useValue: {} }],
   bootstrap: [AppComponent]
 })
